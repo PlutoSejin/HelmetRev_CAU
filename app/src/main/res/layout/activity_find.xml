@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".LoginActivity">
+    <TextView
+        android:id="@+id/view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:text="회원정보찾기"
+        android:textSize="30dp"
+        android:textColor="@color/blackColor"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+
+        />
+    <LinearLayout
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/name"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/view"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="이름"
+            android:textSize="20dp"
+            android:layout_marginHorizontal="30dp"
+            android:textColor="@color/blackColor"
+            />
+    </LinearLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/field_name"
+        android:layout_marginTop="1dp"
+        android:layout_below="@id/name"
+        >
+        <EditText
+            android:id="@+id/home_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="이름을 입력해주세요"
+            android:textSize="15dp"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="35dp"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/telephone"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/field_name"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="휴대전화번호"
+            android:textSize="20dp"
+            android:layout_marginHorizontal="30dp"
+            android:textColor="@color/blackColor"
+            />
+    </LinearLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/field_pw"
+        android:layout_marginTop="1dp"
+        android:layout_below="@id/telephone"
+        app:passwordToggleEnabled="true"
+        >
+        <EditText
+            android:id="@+id/home_telephone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:hint="전화번호를 - 없이 입력해주세요"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="30dp"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+    <Button
+        android:id="@+id/btn_information"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="45dp"
+        android:layout_below="@id/field_find"
+        android:background="#0257E5"
+        android:textColor="#FFFF"
+        android:textStyle="bold"
+        android:textSize="17dp"
+        android:text="로그인 정보 받기"/>
+
+    <LinearLayout
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/field_pw"
+        android:id="@+id/field_find"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SMS을 통해 아이디와 비밀번호가 제공됩니다"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/btn_information"
+        android:orientation="horizontal">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/loginwave"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"/>
+
+</LinearLayout>
+
+</RelativeLayout>

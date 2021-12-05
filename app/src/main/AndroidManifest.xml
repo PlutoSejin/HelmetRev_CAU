@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.CAU.helmetrev_new"
+    xmlns:tools="http://schemas.android.com/tools">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-sdk tools:overrideLibrary="com.anychart" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar"
+        android:hardwareAccelerated="false"
+        android:usesCleartextTraffic="true"
+        >
+        <activity android:name="com.CAU.helmetrev_new.HomeActivity" />
+        <activity android:name="com.CAU.helmetrev_new.ChoiceActivity" />
+        <activity android:name="com.CAU.helmetrev_new.SignupActivity" />
+        <activity android:name="com.CAU.helmetrev_new.DiaryActivity"/>
+        <activity android:name="com.CAU.helmetrev_new.LoginActivity"/>
+        <activity android:name="com.CAU.helmetrev_new.SupportActivity"/>
+        <activity android:name="com.CAU.helmetrev_new.UserActivity"/>
+        <activity android:name="com.CAU.helmetrev_new.FindActivity"/>
+        <activity android:name="com.CAU.helmetrev_new.PersonFixActivity"/>
+        <activity android:name="com.CAU.helmetrev_new.FixInfoActivity"/>
+        <activity android:name="com.CAU.helmetrev_new.DetailGraphActivity"/>
+        <activity android:name="com.CAU.helmetrev_new.GraphOldActivity"/>
+        <activity android:name="com.CAU.helmetrev_new.IntroActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.CAU.helmetrev_new.GraphActivity" />
+    </application>
+
+</manifest>

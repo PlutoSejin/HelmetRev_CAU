@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".SignupActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_marginTop="30dp"
+                android:id="@+id/signup_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/blackColor"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:layout_marginLeft="30dp"
+                android:text="회원가입" />
+
+            <LinearLayout
+                android:id="@+id/linear_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@id/signup_label"
+                android:layout_marginTop="30dp"
+                android:layout_marginHorizontal="24dp" >
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="0.8"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/field_id"
+                    app:passwordToggleEnabled="true"
+
+                    >
+                    <EditText
+                        android:id="@+id/id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="아이디 "
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:id="@+id/btn_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:textColorHint="#2EAAF5"
+                    android:background="@android:color/transparent"
+                    android:hint="중복확인"
+                    />
+
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/field_pw"
+                android:layout_below="@id/linear_id"
+                app:passwordToggleEnabled="true"
+                android:layout_marginTop="10dp"
+                >
+                <EditText
+                    android:id="@+id/password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="비밀번호"
+                    android:layout_marginHorizontal="24dp"
+                    android:inputType="textPassword"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/field_pw2"
+                app:passwordToggleEnabled="true"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/field_pw"
+
+                >
+                <EditText
+                    android:id="@+id/c_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="비밀번호 확인"
+                    android:layout_marginHorizontal="24dp"
+                    android:inputType="textPassword"
+
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/field_name"
+                app:passwordToggleEnabled="true"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/field_pw2"
+
+                >
+                <EditText
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="성명"
+                    android:layout_marginHorizontal="24dp"
+                    android:layout_marginTop="10dp"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/field_age"
+                app:passwordToggleEnabled="true"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/field_name"
+
+                >
+                <EditText
+                    android:id="@+id/age"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="나이"
+                    android:layout_marginHorizontal="24dp"
+                    android:layout_marginTop="10dp"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/field_sex"
+                app:passwordToggleEnabled="true"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/field_age"
+
+                >
+                <EditText
+                    android:id="@+id/sex"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="성별"
+                    android:layout_marginHorizontal="24dp"
+                    android:layout_marginTop="10dp"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.core.widget.ContentLoadingProgressBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/loading"
+                android:layout_marginTop="15dp"
+                android:layout_below="@id/field_sex"
+                android:layout_gravity="center"
+                style="?android:progressBarStyle"
+                android:visibility="gone"
+                />
+
+            <Button
+                android:id="@+id/btn_regist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="50dp"
+                android:layout_below="@id/loading"
+                android:background="#0257E5"
+                android:textStyle="bold"
+                android:textSize="16dp"
+                android:textColor="#FFFF"
+                android:text="회원가입하기"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/btn_regist"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/loginwave_2"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY"/>
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+
+
+
+</RelativeLayout>

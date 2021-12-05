@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+
+    tools:context=".HomeActivity">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/main"/>
+
+        <ImageButton
+            android:id="@+id/btn_info"
+            android:layout_width="50dp"
+            android:layout_height="51dp"
+            android:src="@drawable/person"
+            android:layout_marginLeft="329dp"
+            android:layout_marginTop="79dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:padding="0sp"
+             />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/layout1"
+        android:layout_below ="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+
+        >
+        <ImageView
+            android:id="@+id/wave"
+            android:layout_width="350dp"
+            android:layout_height="350dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:layout_marginTop="0dp"
+            android:layout_marginLeft="30dp"
+            android:src="@raw/wave"/>
+        <ImageView
+            android:id="@+id/wave_die"
+            android:layout_width="350dp"
+            android:layout_height="350dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:layout_marginTop="0dp"
+            android:layout_marginLeft="30dp"
+            android:src="@drawable/wave_die"/>
+        <TextView
+            android:id="@+id/timeword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Time"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="190dp"/>
+
+        <TextView
+            android:id="@+id/countDownTextView"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:text="20분 00초"
+            android:textColor="#FFFFFF"
+            android:textSize="40sp"
+            android:gravity="center"
+            android:layout_marginLeft="105dp"
+            android:layout_marginTop="90dp"/>
+
+        <ImageButton
+            android:id="@+id/btn_stop"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="230dp"
+            android:layout_marginLeft="170dp"
+            android:src="@drawable/ssstt"
+            android:padding="0dp"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:scaleType="fitXY"
+            ></ImageButton>
+
+        <ImageButton
+            android:id="@+id/btn_start"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="230dp"
+            android:layout_marginLeft="170dp"
+            android:src="@drawable/playbutton_3"
+            android:padding="0dp"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:scaleType="fitXY"
+            ></ImageButton>
+
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:progressDrawable="@drawable/progressbar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="250dp"
+            android:layout_height="10dp"
+            android:progress="50"
+            android:max="100"
+            android:scaleY="1"
+            android:progressTint="#1e90ff"
+            android:layout_marginTop="385dp"
+            android:layout_marginLeft="80dp"
+            android:layout_weight="2"/>
+        <TextView
+            android:id="@+id/batteryleft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="헤드셋 배터리 잔량"
+            android:textSize="15dp"
+            android:textColor="@color/blackColor"
+            android:layout_marginTop="360dp"
+            android:layout_marginLeft="47dp"/>
+
+        <TextView
+            android:id="@+id/battery0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0%"
+            android:textColor="@color/blackColor"
+            android:textSize="16dp"
+            android:layout_marginTop="380dp"
+            android:layout_marginLeft="50dp"/>
+        <TextView
+            android:id="@+id/battery100"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="100%"
+            android:textColor="@color/blackColor"
+            android:textSize="16dp"
+            android:layout_marginTop="380dp"
+            android:layout_marginLeft="340dp"/>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_below ="@+id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="bottom">
+
+        <ImageButton
+            android:id="@+id/btn_record"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="0dp"
+            android:src="@drawable/databutton"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY">
+
+        </ImageButton>
+
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/btn_support"
+            android:padding="0dp"
+            android:src="@drawable/supportbutton"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY">
+
+        </ImageButton>
+
+        <ImageButton
+            android:id="@+id/btn_user"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:padding="0dp"
+            android:src="@drawable/settingbutton"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"/>
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

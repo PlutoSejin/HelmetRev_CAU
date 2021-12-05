@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+
+    tools:context=".UserActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="0dp"
+            app:contentInsetStart="0dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/fixinfo"/>
+
+            <ImageButton
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/btn_gohome"
+                android:src="@drawable/home"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:padding="0sp"
+                android:background="#00ff0000"
+                android:layout_marginTop="90dp"
+                android:layout_marginLeft="190dp"/>
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/name"
+            android:layout_marginTop="1dp"
+            android:layout_below="@id/toolbar"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="이름 수정"
+                android:textSize="20dp"
+                android:layout_marginHorizontal="30dp"
+                android:textColor="@color/blackColor"
+                />
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/field_name"
+            android:layout_marginTop="30dp"
+            android:layout_below="@id/toolbar"
+            >
+            <EditText
+                android:id="@+id/fixinfo_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="이름을 수정해주세요"
+                android:textSize="15dp"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="35dp"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/password"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/field_name"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="비밀번호 수정"
+                android:textSize="20dp"
+                android:layout_marginHorizontal="30dp"
+                android:textColor="@color/blackColor"
+                />
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/field_password"
+            android:layout_marginTop="30dp"
+            android:layout_below="@id/field_name"
+            >
+            <EditText
+                android:id="@+id/fixinfo_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="비밀번호를 수정해주세요"
+                android:textSize="15dp"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="35dp"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/phone"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/field_password"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="전화번호 수정"
+                android:textSize="20dp"
+                android:layout_marginHorizontal="30dp"
+                android:textColor="@color/blackColor"
+                />
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/field_phone"
+            android:layout_marginTop="30dp"
+            android:layout_below="@id/field_password"
+            >
+            <EditText
+                android:id="@+id/fixinfo_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="전화번호를 수정해주세요"
+                android:textSize="15dp"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="35dp"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_fixinfo"
+            android:layout_below="@id/field_phone"
+            android:layout_marginTop="70dp"
+            android:layout_marginLeft="70dp"
+            android:src = "@drawable/fixinfobtn"
+            android:padding="0dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            />
+
+        <LinearLayout
+            android:layout_below ="@+id/layout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="bottom">
+
+            <ImageButton
+                android:id="@+id/btn_record"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:src="@drawable/databutton_not"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY">
+
+            </ImageButton>
+
+
+            <ImageButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/btn_support"
+                android:padding="0dp"
+                android:src="@drawable/supportbutton_not"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY">
+
+            </ImageButton>
+
+            <ImageButton
+                android:id="@+id/btn_user"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:padding="0dp"
+                android:src="@drawable/settingbutton_not"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"/>
+        </LinearLayout>
+
+
+
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
