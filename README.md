@@ -8,3 +8,5 @@
 3. implementation 'com.akexorcist:bluetoothspp:1.0.0'
     - 블루투스 연결을 위한 빌드
 
+만든사람: 김세진
+연구기간: 2021-01~2021-07, 2021-12
