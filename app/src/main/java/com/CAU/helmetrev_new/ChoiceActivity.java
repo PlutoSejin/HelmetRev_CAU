@@ -15,7 +15,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.ArrayList;
 import java.util.List;
 
+import app.akexorcist.bluetotohspp.library.BluetoothSPP;
+import app.akexorcist.bluetotohspp.library.BluetoothState;
+
 public class ChoiceActivity  extends AppCompatActivity {
+    private BluetoothSPP bt= new BluetoothSPP(this);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,6 +31,8 @@ public class ChoiceActivity  extends AppCompatActivity {
         final int machineID= intent.getIntExtra("machineID", 8888);
         final int Hz = intent.getIntExtra("Hz",40);
 
+
+
         List<String> list = new ArrayList<>();
         list.add("HeadSet01");
         list.add("HeadSet02");
@@ -34,6 +40,8 @@ public class ChoiceActivity  extends AppCompatActivity {
         list.add("HeadSet04");
         list.add("HeadSet05");
         list.add("FB300");
+
+
 
         ArrayAdapter<String> adpater = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, list);
         listView.setAdapter(adpater);
@@ -71,5 +79,16 @@ public class ChoiceActivity  extends AppCompatActivity {
                         }
                     }
         });
+    }
+    public void onStart() {
+        super.onStart();
+        if(!bt.isBluetoothEnabled()) {
+            bt.enable();
+        } else {
+            if(!bt.isServiceAvailable()) {
+                bt.setupService();
+                bt.startService(BluetoothState.DEVICE_OTHER);
+            }
+        }
     }
 }

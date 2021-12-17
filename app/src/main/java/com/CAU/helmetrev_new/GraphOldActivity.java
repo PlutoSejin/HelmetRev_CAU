@@ -96,6 +96,9 @@ public class GraphOldActivity extends AppCompatActivity {
 
         editor = preferences.edit();
 
+        String startDate = preferences.getString("startdate","2021-02-01");
+        String endDate = preferences.getString("enddate","2021-12-06");
+
         final String[] hz = new String[1];
         btn_gohome.setVisibility(View.GONE);
 
@@ -309,9 +312,9 @@ public class GraphOldActivity extends AppCompatActivity {
                     final int av49 = jsonObject.getInt("av49");
                     final int av50 = jsonObject.getInt("av50");
 
-                    System.out.println(cnt);
+                    System.out.println("OOOld graph cnt is "+cnt);
                     System.out.println(av1);
-                    System.out.println(row);
+                    System.out.println("OOOld graph row is "+row);
                     if(success){
                         CH[0]= CH0; av[0]= av0/row;
                         CH[1]= CH1; av[1]= av1/row;
@@ -427,10 +430,23 @@ public class GraphOldActivity extends AppCompatActivity {
                 }
             }
         };
-        OldRequest oldRequest = new OldRequest(userID, machineId, inputDate, responseListener);
+        if(preferences.getBoolean("all_days_average_old",false) && !preferences .getBoolean("recent_5days_average_old",false)){
+            OldRequest oldRequest = new OldRequest(userID, machineId, inputDate, startDate, endDate, responseListener);
+            RequestQueue requestQueue = Volley.newRequestQueue(GraphOldActivity.this);
+            requestQueue.add(oldRequest);
+            System.out.println("all_days_average");
+        }
+        else if(!preferences.getBoolean("all_days_average_old",false) &&preferences.getBoolean("recent_5days_average_old",false)){
+            OldRequest oldRequest = new OldRequest(userID, machineId, inputDate,responseListener);
+            RequestQueue requestQueue = Volley.newRequestQueue(GraphOldActivity.this);
+            requestQueue.add(oldRequest);
+            System.out.println("recent_5days_average");
+        }
+        /*OldRequest oldRequest = new OldRequest(userID, machineId, inputDate, responseListener);
         RequestQueue requestQueue = Volley.newRequestQueue(GraphOldActivity.this);
         requestQueue.add(oldRequest);
-        hz[0] ="CH"+String.valueOf(k[0]);
+        hz[0] ="CH"+String.valueOf(k[0]);*/
+
 
         /*if(inputDate.equals("2021/1/21")){
             for(int i =0 ; i< CH.length ; i++) {

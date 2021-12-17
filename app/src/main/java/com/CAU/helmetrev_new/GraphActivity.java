@@ -315,8 +315,7 @@ public class GraphActivity extends AppCompatActivity {
                     inputDate[0] = inputdate;
 
                     System.out.println("cnt is"+cnt);
-                    System.out.println("IIInput date is"+cnt);
-                    //System.out.println(av1);
+                    System.out.println("IIInput date is"+inputdate);
                     System.out.println(inputDate[0]);
                     System.out.println("row is "+row);
                     if(success){
@@ -442,7 +441,7 @@ public class GraphActivity extends AppCompatActivity {
                 }
             }
         };
-        if(preferences.getBoolean("all_days_average",false) && !preferences.getBoolean("recent_5days_average",false)){
+        if(preferences.getBoolean("all_days_average",false) && !preferences .getBoolean("recent_5days_average",false)){
             TodayRequest todayRequest = new TodayRequest(userID, machineId, startDate, endDate, responseListener);
             RequestQueue requestQueue = Volley.newRequestQueue(GraphActivity.this);
             requestQueue.add(todayRequest);

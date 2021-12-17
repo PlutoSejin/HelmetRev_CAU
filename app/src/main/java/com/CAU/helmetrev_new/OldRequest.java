@@ -10,16 +10,27 @@ import java.util.Map;
 public class OldRequest extends StringRequest {
 
     //서버 url 설정(php파일 연동)
-    private static String URL_GRAPH = "https://brain2020.cafe24.com/getoldjson.php";
+    private static String URL_GRAPH = "https://brain2020.cafe24.com/getoldjson_recent5.php";
+    private static String URL_GRAPH_recent_5average ="https://brain2020.cafe24.com/getoldjson.php";
     private Map<String,String> map;
 
-    public OldRequest(String userID, String machineID,String inputDate, Response.Listener<String>listener){
+    public OldRequest(String userID, String machineID,String inputDate,String startDate, String endDate, Response.Listener<String>listener){
         super(Method.POST,URL_GRAPH,listener,null);
         map=new HashMap<>();
         map.put("userID",userID);
         map.put("machineID",machineID);
         map.put("inputDate",inputDate);
+        map.put("startDate",startDate);
+        map.put("endDate",endDate);
 
+    }
+
+    public OldRequest(String userID, String machineID,String inputDate, Response.Listener<String>listener){
+        super(Method.POST,URL_GRAPH_recent_5average,listener,null);
+        map=new HashMap<>();
+        map.put("userID",userID);
+        map.put("machineID",machineID);
+        map.put("inputDate",inputDate);
     }
 
     @Override

@@ -367,7 +367,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
-                        android:text="05"
+                        android:text="12"
                         android:id="@+id/enddate_month"
                         android:textSize="15dp"
                         android:textColor="@color/blackColor"/>
@@ -382,7 +382,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
-                        android:text="16"
+                        android:text="06"
                         android:id="@+id/enddate_day"
                         android:textSize="15dp"
                         android:textColor="@color/blackColor"/>
@@ -518,7 +518,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
-                        android:text="05"
+                        android:text="12"
                         android:id="@+id/enddate_month_old"
                         android:textSize="15dp"
                         android:textColor="@color/blackColor"/>
@@ -533,7 +533,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
-                        android:text="16"
+                        android:text="06"
                         android:id="@+id/enddate_day_old"
                         android:textSize="15dp"
                         android:textColor="@color/blackColor"/>
