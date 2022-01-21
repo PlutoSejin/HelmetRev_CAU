@@ -4,6 +4,8 @@ apk is helmet rev app.
 If you want to see the code, then go to master branch   
 
 ## Explaination of APP
+### Reason why APP create   
+This app was built to connect with Electroencephalogram machine and detect whether this patient is dementia.    
 ### Main page
 <img src=https://user-images.githubusercontent.com/32812045/150591477-25668601-6575-4755-809e-94493f5fe6b9.png width="20%" height="15%" ></img>   
 This is the main page of app.   
